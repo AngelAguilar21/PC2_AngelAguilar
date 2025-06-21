@@ -7,6 +7,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
@@ -34,7 +35,11 @@ fun HomeScreen(navController: NavController) {
     val currencies = listOf("USD", "EUR", "PEN", "GBP", "JPY")
 
     Column(
-        modifier = Modifier.padding(16.dp)
+        modifier = Modifier
+            .fillMaxSize()  // Asegura que la columna ocupe toda la pantalla
+            .padding(16.dp),  // Mantiene el espacio de padding
+        horizontalAlignment = Alignment.CenterHorizontally,  // Centrado horizontal
+        verticalArrangement = Arrangement.Center
     ) {
         Spacer(modifier = Modifier.padding(10.dp))
         Text("Convertir Monedas", style = MaterialTheme.typography.titleLarge)

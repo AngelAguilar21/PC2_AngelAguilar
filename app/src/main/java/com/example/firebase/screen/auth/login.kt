@@ -4,6 +4,7 @@ import android.widget.Toast
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -22,7 +23,11 @@ fun LoginScreen(navController: NavController) {
     val context = LocalContext.current
 
     Column(
-        modifier = Modifier.padding(16.dp)
+        modifier = Modifier
+            .fillMaxSize()  // Asegura que la columna ocupe toda la pantalla
+            .padding(16.dp),  // Mantiene el espacio de padding
+        horizontalAlignment = Alignment.CenterHorizontally,  // Centrado horizontal
+        verticalArrangement = Arrangement.Center
 
     ) {
         Spacer(modifier = Modifier.padding(10.dp))

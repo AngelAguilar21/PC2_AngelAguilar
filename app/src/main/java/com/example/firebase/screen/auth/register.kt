@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -29,8 +30,10 @@ fun RegisterScreen(navController: NavController) {
 
     Column(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(24.dp)
+            .fillMaxSize()  // Asegura que la columna ocupe toda la pantalla
+            .padding(16.dp),  // Mantiene el espacio de padding
+        horizontalAlignment = Alignment.CenterHorizontally,  // Centrado horizontal
+        verticalArrangement = Arrangement.Center
     ) {
         // Título
         Text(
